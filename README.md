@@ -54,7 +54,7 @@ dependency: https://stedolan.github.io/jq/
 
 ```shell
 # use: cat <file with line separated data> | map <command to receive line data>
-# ex:  printf "foo\nbar\n" | map echo mapped
+# ex:  printf "foo\nbar\n" | map_parallel echo mapped
 #  result:
 #         mapped foo
 #         mapped bar
@@ -79,7 +79,7 @@ dependency: https://stedolan.github.io/jq/
 
 ```shell
 # use: cat <file with line separated data> | reduce <initial accumulator value> <command to receive line data>
-# ex:  printf "foo\nbar\n" | filter oof append
+# ex:  printf "foo\nbar\n" | reduce oof append
 #      function append {
 #          local line=$1
 #          local accumulator=$2
