@@ -12,14 +12,13 @@ mapped bar"
 }
 run_test test_map
 
-# commenting out due to map_parallel not working
-# function test_map_parallel {
-#     local result=$(printf "foo\nbar\n" | map_parallel echo mapped)
-#     local sorted_result=$(echo "$result" | sort)
-#     assert_equal "$sorted_result" "mapped bar
-# mapped foo"
-# }
-# run_test test_map_parallel
+function test_map_parallel {
+    local result=$(printf "foo\nbar\n" | map_parallel echo mapped)
+    local sorted_result=$(echo "$result" | sort)
+    assert_equal "$sorted_result" "mapped bar
+mapped foo"
+}
+run_test test_map_parallel
 
 function not_foo {
     if [[ $1 != 'foo' ]]; then
