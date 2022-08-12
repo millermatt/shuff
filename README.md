@@ -6,6 +6,10 @@ Yes, it's ridiculous.
 
 See [test/lib/shuff.test.sh](test/lib/shuff.test.sh) for more examples.
 
+## Install
+
+Download [build/lib/shuff.sh](build/lib/shuff.sh) and source it in your script.
+
 ## API
 
 ### `concat`
