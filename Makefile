@@ -11,9 +11,5 @@ clean:
 
 .PHONY: test
 test:
-	@echo "Test sh"
-	@find ./test/*/** -type f | xargs -n1 sh -c
 	@echo "Test bash"
 	@find ./test/*/** -type f | xargs -n1 bash -c
-	@echo "Test zsh"
-	@find ./test/*/** -type f | xargs -n1 zsh -c
